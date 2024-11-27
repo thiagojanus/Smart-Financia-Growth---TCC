@@ -1,1 +1,1 @@
-# Smart-Financia-Growth---TCC
+# SmartFinanciaGrowth-TCC
