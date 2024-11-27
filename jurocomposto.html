@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Juros Compostos</title>
+    <link rel="shortcut icon" type="x-icon"  href="img/Logo TCC.png">
+    <link rel="stylesheet" href="index.html">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        body {
+            font-family: sans-serif;
+            background-image: linear-gradient(to bottom, #1B0A40, #210068);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #1b0a40; ;
+            margin-bottom: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .input-group label {
+            color:  #1b0a40; 
+            margin-right: 10px;
+        }
+
+        .input-group input {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .input-group select {
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color:  whitesmoke; 
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        button:hover {
+            background-color: #1b0a40; /* Roxo mais escuro */
+            color: #fff;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color:#1b0a40; 
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .btn-voltar {
+            display: block;
+            margin-bottom: 1rem;
+            color: #383838;
+            text-decoration: none;
+            }
+
+        .btn-voltar i {
+            margin-right: 0.5rem;
+        }
+        .btn-voltar:hover{
+            color: #0c0124;
+        }
+    </style>
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <div class="container" data-aos="fade-up">
+        <a class="btn-voltar" href="calculadora.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle btn-voltar" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+            </svg>
+        </a>
+        <h1>Simulador de Juros Compostos</h1>
+
+        <div class="input-group">
+            <label for="valor-inicial">Valor inicial:</label>
+            <div>
+                <span>R$</span>
+                <input type="number" id="valor-inicial" value="0">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="valor-mensal">Valor mensal:</label>
+            <div>
+                <span>R$</span>
+                <input type="number" id="valor-mensal" value="0">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="taxa-juros">Taxa de juros:</label>
+            <div>
+                <span>%</span>
+                <input type="number" id="taxa-juros" value="0">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="periodo">Período:</label>
+            <div>
+                <input type="number" id="periodo" value="0">
+                <select id="periodo-tipo">
+                    <option value="ano">ano(s)</option>
+                    <option value="mes">mês(es)</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="calcular">Calcular</button>
+        <button id="limpar">Limpar</button>
+
+        <div class="result">
+            <p>O valor final será: <span id="valor-final">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        const valorInicialInput = document.getElementById('valor-inicial');
+        const valorMensalInput = document.getElementById('valor-mensal');
+        const taxaJurosInput = document.getElementById('taxa-juros');
+        const periodoInput = document.getElementById('periodo');
+        const periodoTipoSelect = document.getElementById('periodo-tipo');
+        const calcularButton = document.getElementById('calcular');
+        const limparButton = document.getElementById('limpar');
+        const valorFinalSpan = document.getElementById('valor-final');
+
+        calcularButton.addEventListener('click', () => {
+            const valorInicial = parseFloat(valorInicialInput.value);
+            const valorMensal = parseFloat(valorMensalInput.value);
+            const taxaJuros = parseFloat(taxaJurosInput.value) / 100;
+            const periodo = parseInt(periodoInput.value);
+            const periodoTipo = periodoTipoSelect.value;
+
+            let valorFinal = valorInicial;
+
+            if (periodoTipo === 'ano') {
+                for (let i = 0; i < periodo; i++) {
+                    valorFinal = valorFinal * (1 + taxaJuros) + (valorMensal * 12);
+                }
+            } else {
+                for (let i = 0; i < periodo; i++) {
+                    valorFinal = valorFinal * (1 + taxaJuros) + valorMensal;
+                }
+            }
+
+            valorFinalSpan.textContent = valorFinal.toFixed(2);
+        });
+
+        limparButton.addEventListener('click', () => {
+            valorInicialInput.value = 0;
+            valorMensalInput.value = 0;
+            taxaJurosInput.value = 0;
+            periodoInput.value = 0;
+            periodoTipoSelect.value = 'ano';
+            valorFinalSpan.textContent = 0;
+        });
+    </script>
+    <script>
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
+      </script>
+</body>
+</html>

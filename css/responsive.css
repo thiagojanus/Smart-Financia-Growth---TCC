@@ -1,0 +1,245 @@
+@media screen and (max-width: 900px){
+    header .nav-links, .button{
+        display: none;
+    }
+    .grafico{
+        position: absolute;
+        top: 25%;
+        width: 40%;
+        margin-left: 7%;
+    }
+    h1{
+        padding-top: 23%;
+        padding-right: 4%;
+    }
+
+    header .btn-menu-mob{
+        display: block;
+    }
+    .img-porco{
+        width: 80%;
+        padding-bottom: 4%;
+        padding-top: 3%;
+        padding-left: 1%;
+    }
+
+   
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 2.5em;
+        padding-top: 72%;
+        padding-left: 3%;
+    }
+
+
+    h2{
+        margin-top: 7%;
+    }
+
+    h5{
+        padding-left: 3%;
+    }
+
+    .home{
+        height: 100vh;
+    }
+
+    .nav_logo{
+        padding-top: 3%;
+        width: 45%;
+    }
+
+    .nav_logo-preta{
+        padding-top: 3%;
+        width: 45%;
+    }
+
+    .grafico{
+        margin-top: 75%;
+        margin-left: -62%;
+        width: 60%;
+    }
+
+    .imagem2{
+        width: 80%;
+        padding-bottom: 4%;
+        padding-top: 3%;
+        padding-left: 1%;
+    }
+
+    .img-porco{
+        width: 80%;
+        padding-bottom: 4%;
+        padding-top: 3%;
+        padding-left: 1%;
+    }
+
+    .h2-edc{
+        color: #fff;
+        margin-left: 5%;
+
+      }
+      
+      .h2-conceito{
+        color: #ffffff;
+        margin-right: 5%;
+        font-size: 28px;
+        margin-left: 5%;
+      }
+
+      .p-conceito{
+        font-size: 0.8em;
+        margin-right: 4%;
+      }
+
+      .accordion{
+        width: 90%;
+      }
+
+
+    .p-projeto, .p2-projeto{
+        font-size: 0.8em;
+        padding-left: 3%;
+        padding-right: 5%;
+    }
+
+
+    .h2-card{
+        padding-top: 10%;
+    }
+
+    .p-card{
+        font-size: 0.8em;
+        padding-left: 3%;
+        padding-right: 5%;
+    }
+
+    .btn-inicial{
+        margin-left: 11%;
+        margin-top: 8%;
+    }
+
+    .material-grafico__gallery{
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .main-title{
+        font-size: 25px;
+    }
+
+    .form-contato{
+       padding-bottom: 15%;
+    }
+
+    .forms-fundo{
+       height: 620px;
+       margin-left: 5%;
+       margin-right: 5%;
+    }
+
+    .h2-forms{
+        padding-top: 10%;
+    }
+
+    .field{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        padding-left: 10%;
+    }
+
+    .p-forms{
+        font-size: 0.8em;
+    }
+
+    .btn-forms{
+        margin-left: 32%;
+    }
+
+    footer{
+        padding-bottom: 5%;
+    }
+
+    footer ul li a{
+        display: none;
+    }
+
+    .footer-section h3{
+        text-align: center;
+    }
+    .link-footer{
+        display: none;
+    }
+
+    .p-footer{
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    .footer-bottom{
+        font-size: 1em;
+    }
+
+    .social-icons a{
+        display: none;
+    }
+    .edc-financeiro{
+        height: 180vh;
+    }
+    .calc{
+        width: 95%;
+        margin-left: 2.1%;
+        margin-top: 42%;
+        height: 600px;
+    }
+    .img-contato{
+        display: none;
+    }
+    .h1-contato{
+        margin-top: -53%;
+    }
+    .p-contato{
+        padding-right: 5%;
+    }
+    .form-group input{
+        width: 100%;
+    }
+    .btn-contato{
+        width: 100%;
+    }
+    .footer-section a, .footer-section2 a{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 407px) {
+    .grafico{
+        margin-left: -78%;
+        position: absolute;
+        top: 9%;
+    }
+    .btn-explorar{
+        padding: 10px 27px;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    h1{
+        font-size: 1.5em;
+    }
+    .btn-inicial{
+        font-size: 13px;
+    }
+    .btn-explorar{
+        font-size: 13px;
+    }
+    .grafico{
+        margin-top: 50%;
+        width: 80%;
+        margin-left: -75%;
+    }
+}

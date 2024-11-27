@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon"  href="img/Logo TCC.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Porcentagem</title>
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-image: linear-gradient(to bottom, #1B0A40, #210068);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .calc{
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            margin-left: 3%;
+            margin-top: 10%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1B0A40;
+            margin-bottom: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .calc-button {
+            background-color: #cccccc;
+            border: none;
+            border-radius: 5px;
+            padding: 25px;
+            text-align: center;
+            font-size: 14px;
+            color: #1B0A40;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .calc-button:hover {
+            background-color: #1B0A40;
+            color: whitesmoke;
+        }
+
+    
+        a{
+            text-decoration: none;
+        }
+        .btn-voltar {
+            display: block;
+            margin-bottom: 1rem;
+            color: #383838;
+            text-decoration: none;
+            }
+
+        .btn-voltar i {
+            margin-right: 0.5rem;
+        }
+        .btn-voltar:hover{
+            color: #0c0124;
+        }
+        @media screen and (max-width: 500px) {
+            .calc{
+                width: 84.2%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <section data-aos="fade-up">
+        <div class="calc">
+            <a class="btn-voltar" href="calculadora.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle btn-voltar" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                </svg>
+            </a>
+           <h1>Porcentagens</h1>
+           <div class="button-grid">
+               <a href="porcensimples.html" class="calc-button">Porcentagem Simples</a>
+               <a href="aumentopercen.html" class="calc-button">Aumento Percentual</a>
+               <a href="diminuicaopercen.html" class="calc-button">Diminuição Percentual</a>
+               <a href="variacaopercen.html" class="calc-button">Variação Percentual</a>
+               
+           </div> 
+        </div>
+       </section>
+</body>
+</html>

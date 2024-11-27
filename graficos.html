@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Financial Growth</title>
+    <link rel="stylesheet" href="css/grafico.css" />
+    <link rel="stylesheet" href="css/responsive.css" media="screen" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="shortcut icon" type="x-icon"  href="img/Logo TCC.png">
+  </head>
+  
+  <body class="body">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <img src="img/Logo TCC.png" class="nav_logo" alt="Logo branca">
+        <img src="img/Logo TCC2.png" class="nav_logo-preta" alt="Logo preta">
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="recomendações.html">Recomendações</a></li>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="graficos.html" class="active">Gráficos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><button class="btn-acessibilidade" onclick="alterarTamanhoTexto(1)" title="Aumentar texto">A+</button></li>
+              <li><button class="btn-acessibilidade-" onclick="alterarTamanhoTexto(-1)" title="Diminuir texto ">A-</button></li>
+          </ul>
+
+
+          <div class="btn-menu-mob" id="btn-menu-mob">
+            <div class="line-menumob-1"></div>
+            <div class="line-menumob-2"></div>
+            <div class="line-menumob-3"></div>
+          </div>
+
+        <ul class="menu-mobile" id="menu-mobile">
+          <li>
+            <a href="index.html">Home</a><br>
+            <a href="recomendações.html">Recomendações</a><br>
+            <a href="calculadora.html">Calculadora</a><br>
+            <a href="graficos.html">Gráficos</a><br>
+            <a href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+        <h1 class="main-title">Dashboard Avançado de Educação Financeira no Brasil</h1>
+        
+
+        <div class="tabs" >
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="visao-geral">Visão Geral</button>
+                <button class="tab-button" data-tab="planilha-gastos">Planilha de Gastos</button>
+                <button class="tab-button" data-tab="educacao">Quiz Financeiro</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="visao-geral" class="tab-panel active">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h2>Nível de Educação Financeira por Região</h2>
+                            <p>Escala de 0 a 10</p>
+                            <canvas id="educacao-financeira-chart"></canvas>
+                          
+                            <p class="p-grafico">Fonte: Banco Central do Brasil.</p>
+                        </div>
+                        <div class="card">
+                            <h2>Evolução do Endividamento das Famílias</h2>
+                            <p>Percentual em relação à renda</p>
+                            <canvas id="endividamento-chart"></canvas>
+                            
+                            <p class="p-grafico">Fontes: Peic/Confederação Nacional do Comércio de Bens, Serviços e Turismo (CNC).</p>
+                        </div>
+                        <div class="card">
+                            <h2>Impacto da Educação Financeira</h2>
+                            <p>Comparação entre grupos com e sem educação financeira</p>
+                            <canvas id="impacto-educacao-chart"></canvas>
+                           
+                            <p class="p-grafico">Fontes: ANBIMA/CNDL/Associação Brasileira de Planejamento Financeiro/SPC BRASIL/CNI.</p>
+                        </div>
+      
+                      <div class="card">
+                          <h2>Dicas para Economizar</h2>
+                          <p>5 Estratégias para aumentar sua poupança:</p>
+                          <br>
+                          <p><span class="span-graf">1. Mapeie Seus Gastos </span>  - Entenda onde seu dinheiro é gasto diariamente e identifique áreas para reduzir despesas.</p>
+                          <p><span class="span-graf">2. Defina Objetivos e Prazos </span> - Tenha metas claras, como viajar ou comprar um imóvel, para manter o foco na economia. </p>
+                          <p><span class="span-graf">3. Elabore um Planejamento </span> - Crie um planejamento financeiro para saber quanto do seu dinheiro está comprometido e para quais finalidades.</p>
+                          <p><span class="span-graf">4. Use a regra dos 50/30/20 </span> - Organize sua renda, dividindo-a em 50% para necessidades básicas, 30% para desejos pessoais e 20% para poupança e dívidas.</p>
+                          <p><span class="span-graf">5. Encontre Opções Econômicas </span> - Revise despesas como planos de celular e assinaturas, buscando alternativas mais baratas.</p>
+                          <ul id="dicas-financeiras"></ul>
+                          
+                          <p class="p-grafico">Fonte: SPC Brasil.</p>
+                      </div>
+                      <div class="card">
+                        <h2>Tipos de Investimento e Seus Riscos</h2>
+                        <p>A tabela a seguir mostra os tipos de investimento e seus riscos, essenciais para decisões financeiras seguras.</p>
+                        <ul id="cursos-table"></ul>
+                        <br>
+                        <p><span class="span-graf">• LCI e LCA - </span>Títulos de crédito que financiam o setor imobiliário (LCI) e o agronegócio (LCA). São isentos de Imposto de Renda para pessoas físicas. <br> <span class="span-risco">Risco:</span> Baixo a moderado, com proteção do FGC. <br> <span class="span-retorno">Retorno:</span> Geralmente atrativo, especialmente pela isenção fiscal.</p><br>
+                        <p><span class="span-graf">• CDBs - </span>Títulos emitidos por bancos que oferecem rendimento atrelado ao CDI (Certificado de Depósito Interbancário). O investidor empresta dinheiro ao banco e recebe juros. <br> <span class="span-risco">Risco:</span> Moderado, depende da instituição; o FGC protege investimentos até um limite. <br> <span class="span-retorno">Retorno:</span> Normalmente maior que a poupança.</p><br>
+                        <p><span class="span-graf">• Fundo de investimentos - </span>Fundos que juntam capital de investidores para aplicar em diversos ativos, geridos por profissionais, como ações e renda fixa.<br> <span class="span-risco">Risco:</span> Varia conforme a estratégia do fundo: ações são mais arriscadas, renda fixa é mais segura. <br> <span class="span-retorno">Retorno:</span>  Pode ser diversificado e é gerido por especialistas.</p><br>
+                        <p><span class="span-graf">• Previdência privada - </span> Investimento onde você contribui com uma quantia por um período, rendendo juros. Pagamentos podem ser mensais ou únicos, com contribuições adicionais possíveis. <br> <span class="span-risco">Risco:</span> Variável, dependendo do perfil de investimento escolhido. <br> <span class="span-retorno">Retorno:</span> Pode ser vantajoso para planejamento de longo prazo, com benefícios fiscais.</p><br>
+                        <p><span class="span-graf">• Renda fixa - </span>Investimentos com retorno previsível, como títulos públicos e privados, CDBs, debêntures e Tesouro Direto. <br> <span class="span-risco">Risco:</span> Geralmente baixo a moderado, dependendo do emissor do título. <br> <span class="span-retorno">Retorno:</span> Mais previsível, mas geralmente inferior ao das ações.</p><br>
+                        <p class="p-grafico">Fontes: SPC BRASIL/Caixa.</p>
+                      </div>
+                      <div class="card">
+                        <h2>Glossário Financeiro</h2>
+                        <p>Aprenda os termos mais importantes</p>
+                        <br>
+                        <p><span class="span-graf">• CDI -</span> Certificado de Depósito Interbancário, uma taxa de referência no mercado financeiro.</p>
+                        <p><span class="span-graf">• CDB - </span>Certificado de Depósito Bancário, um título de renda fixa emitido por bancos.</p>
+                        <p><span class="span-graf">• Tesouro Direto - </span>Programa do governo que permite a compra de títulos públicos por pessoas físicas.</p>
+                        <p><span class="span-graf">• Balanço Patrimonial - </span>Documento contábil que apresenta a situação financeira de uma pessoa ou empresa em um determinado momento, mostrando ativos, passivos e patrimônio líquido.</p>
+                        <p><span class="span-graf">• Capital - </span>Recursos financeiros disponíveis para investimento ou para a realização de atividades econômicas.</p>
+                        <p><span class="span-graf">• Valorização - </span>Aumento do valor de um ativo ao longo do tempo.</p>
+                        <p><span class="span-graf">• Aposentadoria</span>Período da vida em que uma pessoa deixa de trabalhar e utiliza seus recursos financeiros acumulados.</p>
+                        <p><span class="span-graf">• Liquidez - </span>Facilidade com que um ativo pode ser convertido em dinheiro sem perder seu valor.</p>
+                        <p><span class="span-graf">• Asset (Ativo) - </span>Qualquer recurso que tenha valor e possa ser convertido em dinheiro, como imóveis, ações e contas bancárias.</p>
+                        <p><span class="span-graf">• Câmbio - </span>Mercado em que ocorrem a compra e venda de moedas estrangeiras.</p>
+                        <p><span class="span-graf">• Divida - </span>Montante de dinheiro que uma pessoa ou entidade deve a outra.</p>
+                        <p><span class="span-graf">• Empreendedorismo - </span>Processo de criar, desenvolver e gerenciar um novo negócio, assumindo riscos financeiros.</p>
+                        <p><span class="span-graf">• Finanças Pessoais - </span> Gestão das finanças de um indivíduo ou família, incluindo renda, gastos, investimentos e economia.</p>
+                        <p><span class="span-graf">• Investimento - </span>Alocação de recursos financeiros com a expectativa de obter um retorno futuro.</p>
+                        <p><span class="span-graf">• Renda Passiva - </span>Renda obtida sem a necessidade de trabalho ativo, como aluguéis, dividendos ou royalties.</p>
+                        <p><span class="span-graf">• Reserva de Emergência - </span>Fundos guardados para cobrir despesas inesperadas ou emergências financeiras.</p>
+                        <p><span class="span-graf">• Taxa de Juros - </span>Custo do crédito ou retorno sobre um investimento, expresso como uma porcentagem.</p>
+                        <p class="p-grafico">Fontes: Serasa/Banco Central do Brasil.</p>
+                        <dl id="glossario-financeiro"></dl>
+                      </div>
+                      
+                    </div>
+                </div>
+
+                <div id="planilha-gastos" class="tab-panel">
+                    <div class="card">
+                        <h2>Planilha de Gastos</h2>
+                        <table id="planilha-gastos-table">
+                            <thead>
+                                <tr>
+                                    <th>Categoria</th>
+                                    <th>Valor Gasto (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be added dynamically -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Total</td>
+                                    <td id="total-gasto">0.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button class="btn" id="adicionar-categoria">Adicionar Categoria</button>
+                    </div>
+                </div>
+
+                <div id="educacao" class="tab-panel">
+                    <div class="grid-container1">
+                        <div class="card">
+                            <h2 class="h2-quiz">Quiz de Conhecimentos Financeiros</h2>
+                            <p class="p-quiz">Teste o que você sabe sobre finanças</p>
+                            <br>
+                            <div id="quiz-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Smart Financial Growth</h3>
+            <p class="p-footer"> <span>Smart Financial Growth,</span> soluções financeiras inteligentes</p>
+            <p class="p-footer">para seu crescimento.</p>
+          </div>
+          <div class="footer-section">
+            <ul>
+              <li><a href="index.html" class="link-footer">Home</a></li> 
+              <li><a href="#Projeto" class="link-footer">Sobre</a></li> 
+              <li><a href="recomendações.html" class="link-footer">Recomendações</a></li>
+            </ul>
+          </div>
+          <div class="footer-section2">
+            <ul>
+              <li><a href="calculadora.html" class="link-footer">Calculadora</a></li> 
+              <li><a href="graficos.html" class="link-footer">Gráficos</a></li> 
+              <li><a href="contato.html" class="link-footer">Contato</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Smart Financial Growth. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      <script>
+        let tamanhoTexto = 16; // Tamanho inicial do texto
+          function alterarTamanhoTexto(incremento) {
+              tamanhoTexto += incremento;
+              const textos = document.querySelectorAll('h1, h2, p, th, td'); // Seleciona todos os h1, h2 e p
+              textos.forEach(function(texto) {
+                  texto.style.fontSize = tamanhoTexto + 'px';
+              });
+          }  
+      </script>
+      <script>
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/grafico.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

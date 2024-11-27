@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Financial Growth</title>
+    <link rel="stylesheet" href="css/recomendacao.css"/>
+    <link rel="stylesheet" href="css/responsiverecom.css" media="screen" />
+    <link rel="shortcut icon" type="x-icon"  href="img/Logo TCC.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <img src="img/Logo TCC.png" class="nav_logo" alt="Logo branca">
+        <img src="img/Logo TCC2.png" class="nav_logo-preta" alt="Logo preta">
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#recomendacoes" class="active">Recomendações</a></li>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><button class="btn-acessibilidade" onclick="alterarTamanhoTexto(1)" title="Aumentar texto">A+</button></li>
+              <li><button class="btn-acessibilidade-" onclick="alterarTamanhoTexto(-1)" title="Diminuir texto ">A-</button></li>
+          </ul>
+
+
+
+        <div class="btn-menu-mob" id="btn-menu-mob" data-aos="fade-left">
+          <div class="line-menumob-1"></div>
+          <div class="line-menumob-2"></div>
+          <div class="line-menumob-3"></div>
+        </div>
+
+        <ul class="menu-mobile" id="menu-mobile">
+          <li>
+            <a href="index.html" >Home</a><br>
+            <a href="recomendações.html">Recomendações</a><br>
+            <a href="calculadora.html">Calculadora</a><br>
+            <a href="graficos.html">Gráficos</a><br>
+            <a href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Pag. Recomendação -->
+    <section class="home" data-aos="fade-up">
+      <h1>Recomendações</h1>
+        <p class="p-recomendacao">Essa seção oferece conteúdo sobre educação financeira, produzido por especialistas. Há vídeos, e-books e podcasts recomendados que podem ajudá-lo a se aprofundar no assunto. Explore essas indicações com atenção, pois elas podem lhe trazer conhecimento e inspiração.</p>
+        <img class="img-recomendacao" src="img/img-recomendacao.svg" alt="" data-aos="fade-up" data-aos-delay="600">
+    </section>
+
+    <!--Conteúdo-->
+    <section class="conteudo" data-aos="fade-up">
+      <h4>Categorias:</h4>
+      <div class="filter-buttons">
+        <button class="btn-filtros" id="allBtn">Todos</button>
+        <button class="btn-categoria" id="ebookBtn">Ebook</button>
+        <button class="btn-categoria" id="videoBtn">Vídeo</button>
+        <button class="btn-categoria" id="podcastBtn">Podcast</button>
+      </div>
+    
+      <div class="card-container">
+        <div class="card" data-type="video" >
+          <a href="https://youtu.be/kXzTa6t1fTg">
+            <img src="img/4 FORMAS DE GANHAR DINHEIRO DO SEU BANCO!.jpg" alt="Vídeo 1">
+            <div class="card-content">
+              <h3> Investidor Sardinha</h3>
+              <p>4 FORMAS DE GANHAR DINHEIRO DO SEU BANCO!</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="video" >
+          <a href="https://youtu.be/3uwjOzbEYjU">
+            <img src="img/img10.jpg" alt="Vídeo 2">
+            <div class="card-content">
+              <h3>Manual da Evolução</h3>
+              <p>Como Fazer O DINHEIRO CRESCER | 3 Fases das Finanças Pessoais</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="video" >
+          <a href="https://youtu.be/1ulzj3dJ4EA">
+            <img src="img/Como funciona a economia Jovens de negócios.jpg" alt="Vídeo 3">
+            <div class="card-content">
+              <h3>Jovens de negócios</h3>
+              <p>Como funciona a economia?</p>
+            </div>
+          </a>
+        </div>
+
+        <br>
+        <div class="card" data-type="video">
+          <a href="https://youtu.be/1ulzj3dJ4EA">
+            <img src="img/FINANCIAR, ALUGAR OU COMPRAR.jfif" alt="Vídeo 4">
+            <div class="card-content">
+              <h3> Jovens de negócios</h3>
+              <p>FINANCIAR, ALUGAR OU COMPRAR À VISTA?</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="video">
+          <a href="https://youtu.be/jmOyg-i9FLE?si=Pc6G154n3pDp28i0">
+            <img src="img/COMO CONSEGUIR ORGANIZAR SUAS FINANÇAS MENSALMENTE.jpg" alt="Vídeo 5">
+            <div class="card-content">
+              <h3>Luciana Fiaux - Domine suas Finanças</h3>
+              <p>COMO CONSEGUIR ORGANIZAR SUAS FINANÇAS MENSALMENTE?</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="video">
+          <a href="https://youtu.be/iwacYbvH-KI?si=naXvB542dCWw-thL">
+            <img src="img/LIVRE-SE DAS DÍVIDAS EM TEMPO RECORDE!.jpg" alt="Podcast 2">
+            <div class="card-content">
+              <h3>Luciana Fiaux - Domine suas Finanças</h3>
+              <p>LIVRE-SE DAS DÍVIDAS EM TEMPO RECORDE!</p>
+            </div>
+          </a>
+        </div>
+        <br>
+        <div class="card" data-type="podcast">
+          <a href="https://open.spotify.com/episode/45WjeIfOcgKiQE7GBF4SPZ?si=Z_V6OEydTT-yagVFVJXmNA">
+            <img src="img/ab6765630000ba8afa534fc2145732d3e7d4ffee.jfif" alt="Podcast 1">
+            <div class="card-content">
+              <h3>PoupeCast</h3>
+              <p>MePoupe </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="podcast">
+          <a href="https://open.spotify.com/show/4f5Pcq1g6SmMgttwg6Vnzu">
+          <img src="img/podcrescer.jfif" alt="Podcast 2">
+          <div class="card-content">
+            <h3>PodCrescer</h3>
+            <p>Sebrae MS</p>
+          </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="podcast">
+          <a href="https://open.spotify.com/show/17bkR8GX6FmyKYvhQv4nOi">
+          <img src="img/os_socios.jfif" alt="Podcast 3">
+          <div class="card-content">
+            <h3>Os Socíos</h3>
+            <p>Grupo Primo</p>
+          </div>
+          </a>
+        </div>
+        <br>
+
+        <div class="card" data-type="ebook">
+          <a href="https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Cadernos_BC-Serie_Educativa_para_criancas/bancocentral.pdf">
+            <img src="img/edcimg.PNG" alt="Podcast 1">
+            <div class="card-content">
+              <h3>O que é um
+                Banco Central?</h3>
+              <p>Banco Central do Brasil</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="ebook">
+          <a href="https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Informacoes_gerais/conceito_cidadania_financeira.pdf">
+          <img src="img/edcimg2.PNG" alt="Podcast 2">
+          <div class="card-content">
+            <h3>o que é
+              cidadania
+              financeira?</h3>
+            <p>Banco Central do Brasil</p>
+          </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="ebook">
+          <a href="https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Folhetos_Serie_II_Financas_Pessoais/folder_serie_II_como_lidar_dividas.pdf">
+          <img src="img/edcimg3.PNG" alt="Podcast 3">
+          <div class="card-content">
+            <h3>Como Lidar com Dívidas
+            </h3>
+            <p>Banco Central do Brasil</p>
+          </div>
+          </a>
+        </div>
+        <br>
+        <div class="card" data-type="ebook">
+          <a href="https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/O_seu_dinheiro_conhecendo_mais_sobre_as_notas_e_as_cedulas/publicacoes_DinheironoBrasil.pdf">
+            <img src="img/edcimg4.PNG" alt="Podcast 1">
+            <div class="card-content">
+              <h3>Dinheiro
+                no Brasil</h3>
+              <p>Banco Central do Brasil</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="ebook">
+          <a href="https://www.bcb.gov.br/content/cidadaniafinanceira/documentos_cidadania/Cuidando_do_seu_dinheiro_Gestao_de_Financas_Pessoais/caderno_cidadania_financeira.pdf">
+          <img src="img/edcimg5.PNG" alt="Podcast 2">
+          <div class="card-content">
+            <h3>Caderno de Educação Finance...</h3>
+            <p>Banco Central do Brasil</p>
+          </div>
+          </a>
+        </div>
+
+        <div class="card" data-type="ebook">
+          <a href="https://educapes.capes.gov.br/bitstream/capes/430564/2/Apostila%20Básico%20em%20Finanças%20Pessoais.pdf">
+          <img src="img/edcimg6.png" alt="Podcast 2">
+          <div class="card-content">
+            <h3>APOSTILA – BÁSICO EM FINANÇAS PESSOAIS</h3>
+            <p>Portal eduCapes | Gov.br</p>
+          </div>
+          </a>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-divider1"></div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Smart Financial Growth</h3>
+          <p class="p-footer"> <span>Smart Financial Growth,</span> soluções financeiras inteligentes</p>
+          <p class="p-footer">para seu crescimento.</p>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><a href="index.html" class="link-footer">Home</a></li> 
+            <li><a href="#Projeto" class="link-footer">Sobre</a></li> 
+            <li><a href="recomendações.html" class="link-footer">Recomendações</a></li>
+          </ul>
+        </div>
+        <div class="footer-section2">
+          <ul>
+            <li><a href="calculadora.html" class="link-footer">Calculadora</a></li> 
+            <li><a href="graficos.html" class="link-footer">Gráficos</a></li> 
+            <li><a href="contato.html" class="link-footer">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Smart Financial Growth. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script>
+      let tamanhoTexto = 16; // Tamanho inicial do texto
+        function alterarTamanhoTexto(incremento) {
+            tamanhoTexto += incremento;
+            const textos = document.querySelectorAll('h1, h2, p'); // Seleciona todos os h1, h2 e p
+            textos.forEach(function(texto) {
+                texto.style.fontSize = tamanhoTexto + 'px';
+            });
+        }  
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

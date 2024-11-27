@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Financial Growth</title>
+    <link rel="stylesheet" href="css/contato.css"/>
+    <link rel="stylesheet" href="css/responsive.css" media="screen" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="shortcut icon" type="x-icon"  href="img/Logo TCC.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <img src="img/Logo TCC.png" class="nav_logo" alt="Logo branca">
+        <img src="img/Logo TCC2.png" class="nav_logo-preta" alt="Logo preta">
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="recomendações.html">Recomendações</a></li>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="graficos.html">Gráficos</a></li>
+              <li><a href="#contato" class="active">Contato</a></li>
+              <li><button class="btn-acessibilidade" onclick="alterarTamanhoTexto(1)" title="Aumentar texto">A+</button></li>
+              <li><button class="btn-acessibilidade-" onclick="alterarTamanhoTexto(-1)" title="Diminuir texto ">A-</button></li>
+          </ul>
+
+
+        <div class="btn-menu-mob" id="btn-menu-mob" data-aos="fade-left">
+          <div class="line-menumob-1"></div>
+          <div class="line-menumob-2"></div>
+          <div class="line-menumob-3"></div>
+        </div>
+
+        <ul class="menu-mobile" id="menu-mobile">
+          <li>
+            <a href="index.html" >Home</a><br>
+            <a href="recomendações.html">Recomendações</a><br>
+            <a href="calculadora.html">Calculadora</a><br>
+            <a href="graficos.html">Gráficos</a><br>
+            <a href="#">Contato</a>
+            <button class="button" id="form-open">Login</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Pag. Recomendação -->
+     <section data-aos="fade-up">
+     <div class="calc">
+        <h1 class="h1-contato">Fale Conosco!!</h1>
+        <img class="img-contato" src="img/undraw_personal_email_re_4lx7 1.svg" alt="">
+        <p class="p-contato">Estamos aqui para ajudá-lo! Tire todas as suas dúvidas conosco e responderemos o mais rápido possível.</p>
+        <div class="form-group">
+          <form action="https://api.staticforms.xyz/submit" method="post">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Insira seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Insira seu email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <input type="text" id="message" name="message" placeholder="Digite sua dúvida" required>
+
+              <input type="hidden" name="accessKey" value="0650c25b-837a-4f71-9554-784707f7d008">
+              <input type="hidden" name="redirectTo" value="https://smartfinancialgrowth.netlify.app/obrigado.html">
+              <button class="btn-contato" type="submit">Enviar</button>
+          </form>
+        </div>
+        
+    </div>
+    </section>
+
+
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Smart Financial Growth</h3>
+          <p class="p-footer"> <span>Smart Financial Growth,</span> soluções financeiras inteligentes</p>
+          <p class="p-footer">para seu crescimento.</p>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><a href="index.html" class="link-footer">Home</a></li> 
+            <li><a href="#Projeto" class="link-footer">Sobre</a></li> 
+            <li><a href="recomendações.html" class="link-footer">Recomendações</a></li>
+          </ul>
+        </div>
+        <div class="footer-section2">
+          <ul>
+            <li><a href="calculadora.html" class="link-footer">Calculadora</a></li> 
+            <li><a href="graficos.html" class="link-footer">Gráficos</a></li> 
+            <li><a href="#" class="link-footer">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Smart Financial Growth. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script>
+      let tamanhoTexto = 16; // Tamanho inicial do texto
+        function alterarTamanhoTexto(incremento) {
+            tamanhoTexto += incremento;
+            const textos = document.querySelectorAll('h1, h2, p'); // Seleciona todos os h1, h2 e p
+            textos.forEach(function(texto) {
+                texto.style.fontSize = tamanhoTexto + 'px';
+            });
+        }  
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+    <!-- Linking SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
